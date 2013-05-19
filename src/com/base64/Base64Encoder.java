@@ -21,7 +21,7 @@ public class Base64Encoder {
 	private FileChannel inChan;
 	private MappedByteBuffer inBuf;
 	private long inSize;
-	private int outSize;
+	private long outSize;
 	private StringBuffer base64Value;
 	private ByteBuffer outBuf;
 	private StringBuffer token;
@@ -69,8 +69,8 @@ public class Base64Encoder {
 		try {
 			inSize = inChan.size();
 			inBuf = inChan.map(FileChannel.MapMode.READ_ONLY, 0, inSize);
-			outSize = (int) (4 * Math.ceil(inSize / 3.0));
-			outBuf = ByteBuffer.allocate(outSize);
+			outSize = (long) (4 * ((inSize / 3) + 1));
+			outBuf = ByteBuffer.allocate((int)outSize);
 		} catch (IOException e) {
 			e.printStackTrace(System.err);
 		}
