@@ -25,7 +25,7 @@ encoder.writeToFile(new FileOutputStream("path/to/destination/file"));
 ```
 
 * To use the GUI version, run the libaray file
-**`java -run Base64Encoder.jar`**
+**`java -jar Base64Encoder.jar`**
 
 <img src="https://raw.github.com/csetariq/Base64Encoder/master/img/screen.png" alt="Demo Interface" height="450" width="600"/>
 
