@@ -15,7 +15,7 @@ More about Base64 [here](https://en.wikipedia.org/wiki/Base64)
 * In order to use this library in your Java application, include [`Base64Encoder.jar`](https://raw.github.com/csetariq/Base64Encoder/master/Base64Encoder.jar) in your classpath
 
 ```
-Base64Encoder encoder = Base64Encoder(new FileInputStream("/path/to/your/file"));
+Base64Encoder encoder = Base64Encoder.getInstance(new FileInputStream("/path/to/your/file"));
 
 /* To get Base64 representation in String */
 String base64 = encoder.getBase64Value();
